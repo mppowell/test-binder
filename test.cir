@@ -1,0 +1,33 @@
+* SpiceNetList
+* 
+* Exported from untitled.sch at 11/25/2019 10:41 AM
+* 
+* EAGLE Version 9.5.2 Copyright (c) 1988-2019 Autodesk, Inc.
+* 
+.TEMP=25.000000
+* --------- .OPTIONS ---------
+* --------- .PARAMS ---------
+
+* --------- devices ---------
+V_V1 N_1 0 0V 
+M_M1 N_3 N_1 0 0 NFET 
+V_VCUR_1 N_2 N_3 
+V_V2 N_2 0 0V 
+
+* --------- models ---------
+
+* (model found in library)
+
+**********************
+* Autodesk EAGLE - Spice Model File
+* Date: 9/17/17
+* basic nfet intrinsic model
+**********************
+.MODEL NFET NMOS (LEVEL=3)
+
+
+* --------- simulation ---------
+.print DC I(V_VCUR_1) I(V_V2) I(V_V1)
+.print AC I(V_VCUR_1) I(V_V2) I(V_V1)
+.print TRAN I(V_VCUR_1) I(V_V2) I(V_V1)
+.END
