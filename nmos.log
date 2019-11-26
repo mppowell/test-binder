@@ -1,0 +1,5 @@
+Questionable use of curly braces in "set filetype={ascii}"
+    Error: undefined symbol in: "[ascii]"
+Circuit: * SpiceNetList
+
+Fatal Error: Set: Missing node(s).
